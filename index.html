@@ -1,0 +1,87 @@
+<head>
+
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(document).bind('keydown',function(e){
+                if ( e.keyCode == 123) {
+                    e.preventDefault();
+                    e.returnValue = false;
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <style>
+    
+        @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+        * {
+            font-family: "Hanna", serif;
+            font-size: 50px;
+            color: #2D3748;
+            background-color: #F7FAFC;
+        }
+        p {
+            margin:0 auto;
+            margin-left: 20%;
+            margin-right: 20%;
+            padding-left: 40px;
+            padding-right: 40px;
+            height: 130px;
+            line-height: 130px;
+            border: 1px solid #742A2A;
+            transition:.3s;
+        }
+
+        p:nth-child(2n+2){
+            text-align: right;
+        }
+
+        p:hover {
+            color: #702459;
+        }
+
+        #p1:hover::after{
+            content: "\f1ea";
+            font-family: "Font Awesome 5 Free";
+            font-weight:900;
+        }
+        #p2:hover::before{
+            content: "\f302";
+            font-family: "Font Awesome 5 Free";
+            font-weight:900;
+        }
+        #p3:hover::after{
+            content: "\f086";
+            font-family: "Font Awesome 5 Free";
+            font-weight:900;
+        }
+
+        p:active {
+            color:#F687B3;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <div style="text-align:center; margin:50px;"><i class="fas fa-exclamation" style="color:#553C9A;"></i> 동싸만 화이팅 <i class="fas fa-exclamation" style="color:#553C9A;"></i></div>
+    <div style="height:70px;"></div>
+    <p id="p1" style="background-color: #FAF5FF;">
+        게시판
+    </p>
+
+    <p id="p2" style="background-color: #E9D8FD;">
+        사진
+    </p>
+
+    <p id="p3" style="background-color: #D6BCFA;">
+        문의하기
+    </p>
+
+</body>
